@@ -21,7 +21,7 @@ export function Nav() {
           <Link
             key={link.name}
             href={link.href}
-            className={`${playfair.className} text-black text-left`}
+            className={`${playfair.className}text-left`}
           >
             <p className='hidden md:block'>{link.name}</p>
           </Link>
@@ -40,18 +40,18 @@ export function MobileNav() {
         onClick={() => setIsOpen((prev) => !prev) }
         aria-expanded={isOpen}
         aria-label={isOpen ? 'Close' : 'Menu'}
-        className={`${playfair.className} flex-col items-center justify-center gap-1.5 ${ isOpen ? 'text-neutral-100' : "text-black"} relative z-9999`}
+        className={`${playfair.className} flex-col items-center justify-center gap-1.5 ${ isOpen ? 'text-neutral-100' : 'text-black'} relative z-9999`}
       >
-        <AnimatePresence mode="wait" initial={false}>
+        <AnimatePresence mode='wait' initial={false}>
           <motion.span
-            key={isOpen ? "close" : "menu"}
+            key={isOpen ? 'close' : 'menu'}
             initial={{ y: 12, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             exit={{ y: -12, opacity: 0 }}
-            transition={{ duration: 0.2, ease: "easeInOut" }}
-            className="inline-block"
+            transition={{ duration: 0.2, ease: 'easeInOut' }}
+            className='inline-block'
           >
-            {isOpen ? "Close" : "Menu"}
+            {isOpen ? 'Close' : 'Menu'}
           </motion.span>
         </AnimatePresence>
       </button>
