@@ -1,20 +1,12 @@
-import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+import type { Metadata } from 'next';
+import { playfair } from '@/app/ui/fonts';
+import './globals.css';
+import { Nav, MobileNav } from './ui/navigation/nav';
+import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: "Thatcher's Portfolio",
-  description: "The software and experience of Thatcher Eames",
+  description: 'The software and experience of Thatcher Eames',
 };
 
 export default function RootLayout({
@@ -24,10 +16,18 @@ export default function RootLayout({
 }>) {
   return (
     <html
-      lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      lang='en'
+      className={`h-full antialiased bg-[#DDC7A0]`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className='min-h-full w-screen has-[.scrolless]:overflow-hidden'>
+        <div className='absolute md:block w-full h-min bg-[#DDC7A0] grid place-items-center pt-[1.5em] font-semibold text-[clamp(5px,3vw,30px)]'>
+          <Nav />
+        </div>
+        <div className={`absolute w-screen md:hidden grid place-items-center pt-[1.5em] font-semibold text-[clamp(5px,8vw,30px)]`}>
+          <MobileNav />
+        </div>
+        {children}
+      </body>
     </html>
   );
 }
