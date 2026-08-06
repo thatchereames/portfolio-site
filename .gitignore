@@ -13,6 +13,9 @@
 # testing
 /coverage
 
+# develop environment
+.vscode
+
 # next.js
 /.next/
 /out/
