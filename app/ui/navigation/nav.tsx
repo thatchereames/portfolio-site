@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { playfair } from '../fonts';
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
+import { AnimatedUnderline } from './underline';
 
 const links = [
   { name: 'Home', href: '/' },
@@ -23,7 +24,9 @@ export function Nav() {
             href={link.href}
             className={`${playfair.className}text-left`}
           >
-            <p className='hidden md:block'>{link.name}</p>
+            <AnimatedUnderline>
+              <p className='hidden md:block px-[0.75em]'>{link.name}</p>
+            </AnimatedUnderline>
           </Link>
         );
       })}
