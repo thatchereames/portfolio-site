@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { playfair } from '../fonts';
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
+import { AnimatedUnderline } from './underline';
 
 const links = [
   { name: 'Home', href: '/' },
@@ -21,9 +22,11 @@ export function Nav() {
           <Link
             key={link.name}
             href={link.href}
-            className={`${playfair.className} text-black text-left`}
+            className={`${playfair.className}text-left`}
           >
-            <p className='hidden md:block'>{link.name}</p>
+            <AnimatedUnderline>
+              <p className='hidden md:block px-[0.75em]'>{link.name}</p>
+            </AnimatedUnderline>
           </Link>
         );
       })}
@@ -40,18 +43,18 @@ export function MobileNav() {
         onClick={() => setIsOpen((prev) => !prev) }
         aria-expanded={isOpen}
         aria-label={isOpen ? 'Close' : 'Menu'}
-        className={`${playfair.className} flex-col items-center justify-center gap-1.5 ${ isOpen ? 'text-neutral-100' : "text-black"} relative z-9999`}
+        className={`${playfair.className} flex-col items-center justify-center gap-1.5 text-[#181514] relative z-49`}
       >
-        <AnimatePresence mode="wait" initial={false}>
+        <AnimatePresence mode='wait' initial={false}>
           <motion.span
-            key={isOpen ? "close" : "menu"}
+            key={isOpen ? 'close' : 'menu'}
             initial={{ y: 12, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             exit={{ y: -12, opacity: 0 }}
-            transition={{ duration: 0.2, ease: "easeInOut" }}
-            className="inline-block"
+            transition={{ duration: 0.2, ease: 'easeInOut' }}
+            className='inline-block'
           >
-            {isOpen ? "Close" : "Menu"}
+            {isOpen ? 'Close' : 'Menu'}
           </motion.span>
         </AnimatePresence>
       </button>
@@ -64,13 +67,13 @@ export function MobileNav() {
             exit={{ scaleY: 0 }}
             transition={{ duration: 0.5, ease: [0.76, 0, 0.24, 1] }}
             style={{ originY: 0 }}
-            className='fixed inset-0 z-50 flex flex-col items-center justify-center bg-neutral-950 text-neutral-100'
+            className='fixed inset-0 z-40 flex flex-col items-center justify-center bg-[#b0b0ad] bg-[linear-gradient(to_right,#959592_1px,transparent_1px),linear-gradient(to_bottom,#959592_1px,transparent_1px)] bg-size-[24px_24px] text-[#181514]'
           >
             <motion.nav
               initial='closed'
               animate='open'
               exit='closed'
-              className='flex flex-col items-center gap-6'
+              className='flex flex-col items-center gap-[1em]'
             >
               {links.map((link, i) =>(
                 <motion.a
@@ -85,7 +88,7 @@ export function MobileNav() {
                       transition: { delay: 0.25 + i * 0.07, duration: 0.4 }
                     },
                   }}
-                  className={`${playfair.className} text-4xl font-semibold tracking-tight sm:text-6xl`}
+                  className={`${playfair.className} text-2xl font-semibold tracking-tight sm:text-6xl`}
                 >
                   {link.name}
                 </motion.a>
