@@ -1,12 +1,13 @@
 "use client";
 
 import { useState } from "react";
+import { motion } from "motion/react";
 
 export function AnimatedUnderline({ children }: { children: React.ReactNode }) {
   const [active, setActive] = useState(false);
 
   return (
-    <span
+    <motion.span
       className="relative inline-block"
       onMouseEnter={() => setActive(true)}
       onMouseLeave={() => setActive(false)}
@@ -14,14 +15,14 @@ export function AnimatedUnderline({ children }: { children: React.ReactNode }) {
       onBlur={() => setActive(false)}
     >
       {children}
-      <svg
+      <motion.svg
         aria-hidden="true"
         viewBox="0 0 960 380"
         preserveAspectRatio="none"
         fill="none"
         className="pointer-events-none absolute left-0 top-full h-[.8em] w-full"
       >
-        <path
+        <motion.path
           d="M26 134
             C77 114 183 112 328 126 
             C495 148 673 148 783 133 
@@ -34,15 +35,15 @@ export function AnimatedUnderline({ children }: { children: React.ReactNode }) {
             C105 361 144 372 319 351 
             460 332 818 283 964 411"
           pathLength="1"
-          stroke="currentColor"
+          stroke="#181514"
           strokeWidth="25"
           strokeLinecap="round"
           vectorEffect="scaling-stroke"
-          className={`[stroke-dasharray:1] transition-[stroke-dashoffset] duration-500 ease-in-out ${
+          className={`[stroke-dasharray:1] transition-[stroke-dashoffset] duration-900 ease-in-out ${
             active ? "[stroke-dashoffset:0]" : "[stroke-dashoffset:1]"
           }`}
         />
-      </svg>
-    </span>
+      </motion.svg>
+    </motion.span>
   );
 }

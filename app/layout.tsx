@@ -19,11 +19,11 @@ export default function RootLayout({
       lang='en'
       className={`h-full antialiased`}
     >
-      <body className={`${playfair.className} bg-[#DDC7A0] text-[#181514] min-h-screen min-w-screen has-[.scrolless]:overflow-hidden`}>
+      <body className={`${playfair.className} bg-[#DDC7A0] text-[#141111] min-h-screen min-w-screen has-[.scrolless]:overflow-hidden`}>
         <div className='absolute md:block w-full h-min grid place-items-center pt-[1.5em] font-semibold text-[clamp(5px,3vw,30px)]'>
           <Nav />
         </div>
-        <div className={`absolute w-screen md:hidden grid place-items-center pt-[1.5em] font-semibold text-[clamp(5px,8vw,30px)]`}>
+        <div className={`absolute w-screen md:hidden grid place-items-center pt-[1.2em] font-semibold text-[clamp(5px,8vw,30px)]`}>
           <MobileNav />
         </div>
         {children}

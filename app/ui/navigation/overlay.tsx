@@ -7,7 +7,7 @@ const TILE = 256;
 const grain = `
 <svg xmlns="http://www.w3.org/2000/svg" width="${TILE}" height="${TILE}">
   <filter id="g">
-    <feTurbulence type="fractalNoise" baseFrequency="0.5" numOctaves="2" stitchTiles="stitch"/>
+    <feTurbulence type="fractalNoise" baseFrequency="0.4" numOctaves="4" stitchTiles="stitch"/>
     <feColorMatrix type="saturate" values="0"/>
     <feComponentTransfer>
       <feFuncA type="linear" slope="0" intercept="1"/>
@@ -22,9 +22,9 @@ const grain = `
 const fibers = `
 <svg xmlns="http://www.w3.org/2000/svg" width="${TILE}" height="${TILE}">
   <filter id="f">
-    <feTurbulence type="fractalNoise" baseFrequency="0.02 0.55"
+    <feTurbulence type="fractalNoise" baseFrequency="0.02 0.35"
                   numOctaves="2" stitchTiles="stitch" result="h"/>
-    <feTurbulence type="fractalNoise" baseFrequency="0.55 0.02"
+    <feTurbulence type="fractalNoise" baseFrequency="0.45 0.02"
                   numOctaves="2" stitchTiles="stitch" seed="7" result="v"/>
     <feBlend in="h" in2="v" mode="multiply" result="mix"/>
     <feColorMatrix in="mix" type="saturate" values="0"/>
