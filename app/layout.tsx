@@ -27,7 +27,7 @@ export default function RootLayout({
           <MobileNav />
         </div>
         {children}
-        <PaperOverlay />
+        {/* <PaperOverlay /> */}
       </body>
     </html>
   );
