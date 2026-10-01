@@ -9,13 +9,13 @@ export default function About() {
         </div>
         <div className='py-4 text-2xl font-medium [&>p]:py-4'>
           <p>
-            Current Master's Student at the University of Southern California. Studying Computer Science with an emphasis in Data Systems & Analysis.
+            Current Master's Student at the University of Southern California. Studying <span className='marker-highlight'>Computer Science</span> with an emphasis in Data Systems & Analysis.
           </p>
           <p>
             Earned a Bachelor of Science degree in Mathematics and Computer Science from the University of California San Diego.
           </p>
           <p>
-            Skilled in object-oriented programming, SQL Data Bases, C/C++, Java, Python, and HTML. An eager learner interested in the fields of data storage and process, interpretable machine learning and the education of computer science. Especially skilled from experience in areas of team management, group collaboration, and customer service.
+            Skilled in object-oriented programming, SQL Data Bases, C/C++, Java, Python, and HTML. An eager learner interested in the fields of data storage and process, <span className='marker-highlight'>interpretable machine learning</span> and the education of computer science. Especially skilled from experience in areas of team management, group collaboration, and customer service.
           </p>
         </div>
       </div>
