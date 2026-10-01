@@ -60,6 +60,45 @@ h1, h2, h3, h4, h5, h6 {
   transform: rotate(-45deg);
 }
 
+.physical-photo {
+  position: relative;
+  padding: 0.7rem 0.7rem 1.25rem;
+  background: #eee2bd;
+  filter: sepia(0.28) saturate(0.72) contrast(0.93);
+  box-shadow: 7px 8px 0 rgba(65, 43, 22, 0.12), 12px 5px 16px rgba(65, 43, 22, 0.18);
+  isolation: isolate;
+}
+
+.physical-photo::before,
+.physical-photo::after {
+  content: '';
+  position: absolute;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.physical-photo::before {
+  inset: 0;
+  background: linear-gradient(135deg, transparent 0 91%, #d8c99f 91% 96%, #f2e6c5 96%);
+  clip-path: polygon(100% 0, 100% 100%, 89% 100%, 95% 94%, 92% 90%, 100% 84%);
+  opacity: 0.9;
+}
+
+.physical-photo::after {
+  top: 1.1rem;
+  left: -1px;
+  width: 5px;
+  height: 22%;
+  background: #eee2bd;
+  clip-path: polygon(0 0, 100% 8%, 30% 47%, 100% 88%, 0 100%);
+}
+
+.physical-photo img {
+  display: block;
+  position: relative;
+  z-index: 1;
+}
+
 .marker-highlight {
   background: linear-gradient(
     104deg,
