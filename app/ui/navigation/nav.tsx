@@ -1,10 +1,24 @@
 'use client';
 
 import Link from 'next/link';
-import { playfair } from '../fonts';
+import { playfair } from '@/app/ui/fonts';
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { AnimatedUnderline } from './underline';
+import {
+  AnimatedUnderline1,
+  AnimatedUnderline2,
+  AnimatedUnderline3,
+  AnimatedUnderline4,
+  AnimatedUnderline5,
+} from './underline';
+
+const animatedUnderlines = [
+  AnimatedUnderline1,
+  AnimatedUnderline2,
+  AnimatedUnderline3,
+  AnimatedUnderline4,
+  AnimatedUnderline5,
+];
 
 const links = [
   { name: 'Home', href: '/' },
@@ -17,12 +31,14 @@ const links = [
 export function Nav() {
   return (
     <div className='flex gap-10 w-fit'>
-      {links.map((link) => {
+      {links.map((link, index) => {
+        const AnimatedUnderline = animatedUnderlines[index];
+
         return (
           <Link
             key={link.name}
             href={link.href}
-            className={`${playfair.className}text-left`}
+            className={`${playfair.className} text-left`}
           >
             <AnimatedUnderline>
               <p className='hidden md:block px-[0.75em]'>{link.name}</p>
