@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 export default function Projects() {
   return (
-    <div className='w-full min-h-[100dvh] flex justify-center px-4 sm:px-6 md:px-8'>
+    <div className='w-full min-h-dhv flex justify-center px-4 sm:px-6 md:px-8'>
       <div className='w-full max-w-5xl pt-20 sm:pt-24 md:pt-32 pb-16 sm:pb-24'>  
         <div className='mb-8 sm:mb-12'>
           <h1 className={`${playfair.className} text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-[#171a21]`}>
@@ -14,7 +14,7 @@ export default function Projects() {
         <div className='flex flex-col gap-12 sm:gap-16 md:gap-24'>
           {/* Mojo Dojo Multiply */}
           <div className='grid grid-cols-1 md:grid-cols-[minmax(0,1.15fr)_minmax(240px,0.85fr)] items-center gap-8 sm:gap-10 md:gap-12'>
-            <div className='sketchy-border p-5 sm:p-7 md:p-10 relative bg-[#DDC7A0]/40 backdrop-blur-[1px] order-1 md:order-none'>
+            <div className='sketchy-border p-5 sm:p-7 md:p-10 relative bg-[#DDC7A0]/40 backdrop-blur-[1px] order-1 md:order-0'>
               <h2 className={`${playfair.className} font-semibold pb-2 text-2xl sm:text-3xl md:text-4xl text-[#171a21]`}>
                 Mojo Dojo Multiply
               </h2>
@@ -44,7 +44,7 @@ export default function Projects() {
                 <li>Structured for future database integration</li>
               </ul>
             </div>
-            <div className='physical-photo rotate-1 sm:rotate-2 mx-auto w-full max-w-sm sm:max-w-md md:max-w-none order-2 md:order-none'>
+            <div className='physical-photo rotate-1 sm:rotate-2 mx-auto w-full max-w-sm sm:max-w-md md:max-w-none order-2 md:order-0'>
               <div className='tape tape-top-center'></div>
               <Image 
                 src='/mojodojo.jpg' 
@@ -58,7 +58,7 @@ export default function Projects() {
 
           {/* Personal Portfolio Site */}
           <div className='grid grid-cols-1 md:grid-cols-[minmax(240px,0.85fr)_minmax(0,1.15fr)] items-center gap-8 sm:gap-10 md:gap-12'>
-            <div className='physical-photo -rotate-1 sm:-rotate-2 mx-auto w-full max-w-sm sm:max-w-md md:max-w-none order-2 md:order-none'>
+            <div className='physical-photo -rotate-1 sm:-rotate-2 mx-auto w-full max-w-sm sm:max-w-md md:max-w-none order-2 md:order-0'>
               <div className='tape tape-top-center'></div>
               <Image 
                 src='/portfolio.jpg' 
@@ -68,7 +68,7 @@ export default function Projects() {
                 className='w-full h-auto object-cover' 
               />
             </div>
-            <div className='sketchy-border p-5 sm:p-7 md:p-10 relative bg-[#DDC7A0]/40 backdrop-blur-[1px] order-1 md:order-none'>
+            <div className='sketchy-border p-5 sm:p-7 md:p-10 relative bg-[#DDC7A0]/40 backdrop-blur-[1px] order-1 md:order-0'>
               <h2 className={`${playfair.className} font-semibold pb-2 text-2xl sm:text-3xl md:text-4xl text-[#171a21]`}>
                 Personal Portfolio Site
               </h2>

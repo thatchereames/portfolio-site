@@ -141,12 +141,12 @@ export function MobileNav() {
                         transition: { delay: 0.15 + i * 0.05, duration: 0.35 },
                       },
                     }}
-                    className='h-[48px] flex items-end justify-center'
+                    className='h-12 flex items-end justify-center'
                   >
                     <Link
                       href={link.href}
                       onClick={() => setIsOpen(false)}
-                      className={`${playfair.className} text-[40px] sm:text-[44px] font-semibold tracking-tight leading-none -translate-y-[1px] inline-block ${
+                      className={`${playfair.className} text-[40px] sm:text-[44px] font-semibold tracking-tight leading-none -translate-y-px inline-block ${
                         isActive
                           ? 'marker-highlight cursor-default'
                           : 'hover:opacity-70 transition-opacity'

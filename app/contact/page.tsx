@@ -2,7 +2,7 @@ import { playfair } from '@/app/ui/fonts';
 
 export default function Contact() {
   return (
-    <div className='w-full min-h-[100dvh] flex justify-center px-4 sm:px-6 md:px-8'>
+    <div className='w-full min-h-dhv flex justify-center px-4 sm:px-6 md:px-8'>
       <div className='w-full max-w-3xl pt-20 sm:pt-24 md:pt-32 pb-16 sm:pb-24'>  
         <div className='mb-8 sm:mb-12'>
           <h1 className={`${playfair.className} text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-[#171a21]`}>
