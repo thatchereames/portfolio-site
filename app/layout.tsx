@@ -2,7 +2,6 @@ import type { Metadata } from 'next';
 import { playfair, newsCycle } from '@/app/ui/fonts';
 import './globals.css';
 import { Nav, MobileNav } from './ui/navigation/nav';
-import PaperOverlay from './ui/navigation/overlay';
 
 export const metadata: Metadata = {
   title: "Thatcher's Portfolio",
@@ -17,17 +16,24 @@ export default function RootLayout({
   return (
     <html
       lang='en'
-      className={`h-full antialiased`}
+      className='h-full antialiased'
     >
-      <body className={`${newsCycle.className} ${playfair.variable} ${newsCycle.variable} bg-[#DDC7A0] text-[#141111] min-h-screen min-w-screen has-[.scrolless]:overflow-hidden`}>
-        <div className='absolute md:block w-full h-min grid place-items-center pt-[1.5em] font-semibold text-[clamp(5px,3vw,30px)]'>
+      <body className={`${newsCycle.className} ${playfair.variable} ${newsCycle.variable} bg-[#DDC7A0] text-[#141111] min-h-screen w-full overflow-x-hidden has-[.scrolless]:overflow-hidden`}>
+        {/* Desktop Navigation */}
+        <header className='hidden md:flex absolute top-0 inset-x-0 z-40 justify-center pt-6 lg:pt-8'>
           <Nav />
+        </header>
+
+        {/* Mobile Navigation Button */}
+        <div className='md:hidden fixed top-6 inset-x-0 z-50 flex justify-end px-6 sm:px-8 pointer-events-none'>
+          <div className='pointer-events-auto'>
+            <MobileNav />
+          </div>
         </div>
-        <div className={`absolute w-screen md:hidden grid place-items-center pt-[1.2em] font-semibold text-[clamp(5px,8vw,30px)]`}>
-          <MobileNav />
-        </div>
-        {children}
-        {/* <PaperOverlay /> */}
+
+        <main className='w-full'>
+          {children}
+        </main>
       </body>
     </html>
   );
