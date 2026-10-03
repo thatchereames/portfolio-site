@@ -47,7 +47,7 @@ function BaseUnderline({
 // 1. The Original Scribble Underline
 export function AnimatedUnderline1({ children, isActive }: UnderlineProps) {
   return (
-    <BaseUnderline isActive={isActive} pathD="M26 134 C77 114 183 112 328 126 C495 148 673 148 783 133 C1046 100 940 30 780 63 C564 103 459 214 216 264 C21 300 23 211 182 202 C432 192 671 210 801 236 C930 260 912 188 798 213 C673 253 378 266 206 326 C105 361 144 372 319 351 C460 332 818 283 964 411">
+    <BaseUnderline isActive={isActive} pathD="M 26 134 C 77 114 183 112 328 126 C 495 148 673 148 783 133 C 1046 100 940 30 780 63 C 564 103 459 214 216 264 C 21 300 23 211 182 202 C 432 192 671 210 801 236 C 930 260 898 181 804 193 C 657 211 564 232 376 329">
       {children}
     </BaseUnderline>
   );
@@ -62,19 +62,19 @@ export function AnimatedUnderline2({ children, isActive }: UnderlineProps) {
   );
 }
 
-// 3. A Double Underline
-export function AnimatedUnderline4({ children, isActive }: UnderlineProps) {
+// 4. A Wavy Underline
+export function AnimatedUnderline3({ children, isActive }: UnderlineProps) {
   return (
-    <BaseUnderline isActive={isActive} pathD="M 39 179 C 145 178 459 216 674 123 C 975 -29 249 106 105 271 C 49 336 75 324 228 269 C 509 190 760 164 1079 146">
+    <BaseUnderline isActive={isActive} pathD="M 12 249 C 148 239 284 181 371 86 C 494 -50 249 80 162 202 C 110 266 185 246 400 156 C 642 47 645 53 502 149 C 359 252 689 237 1303 150">
       {children}
     </BaseUnderline>
   );
 }
 
-// 4. A Wavy Underline
-export function AnimatedUnderline3({ children, isActive }: UnderlineProps) {
+// 3. A Double Underline
+export function AnimatedUnderline4({ children, isActive }: UnderlineProps) {
   return (
-    <BaseUnderline isActive={isActive} pathD="M 22 162 C 83 161 606 211 881 78 C 1188 -96 391 152 275 236 C 74 380 224 287 518 249">
+    <BaseUnderline isActive={isActive} pathD="M 39 179 C 145 178 459 216 674 123 C 975 -29 249 106 105 271 C 49 336 75 324 228 269 C 509 190 760 164 1079 146">
       {children}
     </BaseUnderline>
   );

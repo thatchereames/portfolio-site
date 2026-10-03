@@ -10,7 +10,6 @@ export default function Contact() {
           </h1>
         </div>
         <div className='sketchy-border p-6 sm:p-8 md:p-12 rotate-1 relative max-w-2xl bg-[#DDC7A0]/50 mx-auto'>
-          <div className='tape tape-top-center'></div>
           <h2 className={`${playfair.className} font-semibold pt-2 pb-1 text-2xl sm:text-3xl text-[#171a21]`}>
             Email
           </h2>
