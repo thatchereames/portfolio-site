@@ -132,3 +132,48 @@ h1, h2, h3, h4, h5, h6 {
   color: inherit;
 }
 
+/* Nav Underline Animation */
+.underline-path {
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  transition: stroke-dashoffset 650ms ease-in-out;
+}
+
+.underline-path-active {
+  stroke-dasharray: 1;
+  stroke-dashoffset: 0;
+  transition: stroke-dashoffset 650ms ease-in-out;
+}
+
+.group:hover .underline-path-hoverable,
+.group:focus-visible .underline-path-hoverable {
+  stroke-dashoffset: 0;
+}
+
+/* Sequential Underline 5 Stagger */
+.underline-seg-1,
+.underline-seg-2,
+.underline-seg-3 {
+  transition: stroke-dashoffset 260ms ease-in-out;
+}
+
+.group:hover .underline-seg-1,
+.group:focus-visible .underline-seg-1 {
+  stroke-dashoffset: 0;
+  transition-delay: 0ms;
+}
+
+.group:hover .underline-seg-2,
+.group:focus-visible .underline-seg-2 {
+  stroke-dashoffset: 0;
+  transition-delay: 200ms;
+}
+
+.group:hover .underline-seg-3,
+.group:focus-visible .underline-seg-3 {
+  stroke-dashoffset: 0;
+  transition-delay: 400ms;
+}
+
+
+

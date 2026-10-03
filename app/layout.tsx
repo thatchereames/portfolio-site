@@ -20,12 +20,12 @@ export default function RootLayout({
     >
       <body className={`${newsCycle.className} ${playfair.variable} ${newsCycle.variable} bg-[#DDC7A0] text-[#141111] min-h-screen w-full overflow-x-hidden has-[.scrolless]:overflow-hidden`}>
         {/* Desktop Navigation */}
-        <header className='hidden md:flex absolute top-0 inset-x-0 z-40 justify-center pt-6 lg:pt-8 font-semibold text-base md:text-lg lg:text-xl'>
+        <header className='hidden md:flex absolute top-0 inset-x-0 z-40 justify-center pt-6 lg:pt-8'>
           <Nav />
         </header>
 
         {/* Mobile Navigation Button */}
-        <div className='md:hidden fixed top-4 inset-x-0 z-50 flex justify-center pointer-events-none'>
+        <div className='md:hidden fixed top-6 inset-x-0 z-50 flex justify-end px-6 sm:px-8 pointer-events-none'>
           <div className='pointer-events-auto'>
             <MobileNav />
           </div>
