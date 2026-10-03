@@ -1,41 +1,51 @@
-import { playfair, signature } from '@/app/ui/fonts';
+import { playfair } from '@/app/ui/fonts';
 
-export default function Contact() {
+export default function Experience() {
+  const experiences = [
+    {
+      title: 'Financial Software & Database Internship',
+      description:
+        'Summer internship at Related Companies working on their JD Edwards financial software and SQL databases.',
+    },
+    {
+      title: 'Web App Development Team Lead',
+      description:
+        'Led a 5-person Agile team on a TypeScript educational fighting game across 3 sprints, 300+ commits, and 14+ stand-ups.',
+    },
+    {
+      title: 'VP Coding Instructor',
+      description:
+        'Educate young learners in varying Computer Science subjects and encouraged future involvement.',
+    },
+    {
+      title: 'Computer Science Teaching Assistant',
+      description:
+        'Assisted university professor in the education of young academics in the fundamentals of computer science.',
+    },
+  ];
+
   return (
-    <div className='w-screen flex flex-row justify-center overflow-scroll'>
-      <div className='pt-[15%] md:w-[60%] w-[70%] md:mr-[10%] pb-[15%]'>  
-        <div className='w-fit text-[clamp(30px,10vw,6000px)]'>
-          <div className='w-fit text-[clamp(30px,15vw,6000px)]'>
-          <h2 className={`${playfair.className}text-left text-[0.25em]`}>Experience</h2>
+    <div className='w-full min-h-[100dvh] flex justify-center px-4 sm:px-6 md:px-8'>
+      <div className='w-full max-w-3xl pt-20 sm:pt-24 md:pt-32 pb-16 sm:pb-24'>  
+        <div className='mb-8 sm:mb-12'>
+          <h1 className={`${playfair.className} text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-[#171a21]`}>
+            Experience
+          </h1>
         </div>
-        <div className='text-2xl [&>p]:font-medium [&>h3]:font-semibold [&>h3]:pt-6 [&>h3]:pb-4'>
-          <h3 className='pt-4'>
-            Financial Software & Database Internship
-          </h3>
-          <p>
-            Summer internship at Related Companies working on their JD Edwards financial software and SQL databases.
-          </p>
-          <h3>
-            Web App Development Team Lead
-          </h3>
-          <p>
-            Led a 5-person Agile team a TypeScript educational fighting game across 3 sprints, 300+ commits, and 14+ stand-ups.
-          </p>
-          <h3>
-            VP Coding Instructor
-          </h3>
-          <p>
-            Educate young learners in varying Computer Science subjects and encouraged future involvement
-          </p>
-          <h3>
-            Computer Science Teaching Assistant
-          </h3>
-          <p>
-            Assisted university professor in the education of young academics in the fundamentals of computer science
-          </p>
-        </div>
+        <div className='space-y-8 sm:space-y-10 md:space-y-12'>
+          {experiences.map((exp, idx) => (
+            <div key={idx} className='border-b border-[#141111]/15 pb-8 sm:pb-10 last:border-b-0'>
+              <h2 className={`${playfair.className} text-xl sm:text-2xl md:text-3xl font-semibold text-[#171a21] mb-2 sm:mb-3`}>
+                {exp.title}
+              </h2>
+              <p className='text-base sm:text-lg md:text-xl lg:text-2xl font-medium leading-relaxed text-[#141111]/90'>
+                {exp.description}
+              </p>
+            </div>
+          ))}
         </div>
       </div>
     </div>
   );
 }
+
