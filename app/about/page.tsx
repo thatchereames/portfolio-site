@@ -9,7 +9,7 @@ export default function About() {
             About Me
           </h1>
         </div>
-        <div className='text-base sm:text-lg md:text-xl lg:text-2xl font-medium leading-relaxed text-[#141111]/90 space-y-4 sm:space-y-6'>
+        <div className='text-xl md:text-2xl font-medium leading-relaxed text-[#141111]/90 space-y-5 sm:space-y-6'>
           <p>
             I&apos;m a current Master&apos;s Student at the University of Southern California. Studying <span className='marker-highlight'>Computer Science</span> with an emphasis in Data Systems & Analysis.
           </p>

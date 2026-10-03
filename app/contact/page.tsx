@@ -14,7 +14,7 @@ export default function Contact() {
           <h2 className={`${playfair.className} font-semibold pt-2 pb-1 text-2xl sm:text-3xl text-[#171a21]`}>
             Email
           </h2>
-          <p className='font-medium text-base sm:text-lg md:text-xl mb-6'>
+          <p className='font-medium text-lg sm:text-xl md:text-2xl mb-6'>
             <a 
               href='mailto:thatcher.eames@gmail.com' 
               className='underline break-all sm:break-normal hover:opacity-75 transition-opacity'
@@ -25,7 +25,7 @@ export default function Contact() {
           <h2 className={`${playfair.className} font-semibold pt-4 pb-1 text-2xl sm:text-3xl text-[#171a21]`}>
             LinkedIn
           </h2>
-          <p className='font-medium text-base sm:text-lg md:text-xl'>
+          <p className='font-medium text-lg sm:text-xl md:text-2xl'>
             <a 
               href='https://www.linkedin.com/in/thatchereames/' 
               target='_blank'

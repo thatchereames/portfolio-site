@@ -35,10 +35,10 @@ export default function Experience() {
         <div className='space-y-8 sm:space-y-10 md:space-y-12'>
           {experiences.map((exp, idx) => (
             <div key={idx} className='border-b border-[#141111]/15 pb-8 sm:pb-10 last:border-b-0'>
-              <h2 className={`${playfair.className} text-xl sm:text-2xl md:text-3xl font-semibold text-[#171a21] mb-2 sm:mb-3`}>
+              <h2 className={`${playfair.className} text-2xl md:text-3xl font-semibold text-[#171a21] mb-2 sm:mb-3`}>
                 {exp.title}
               </h2>
-              <p className='text-base sm:text-lg md:text-xl lg:text-2xl font-medium leading-relaxed text-[#141111]/90'>
+              <p className='text-xl md:text-2xl font-medium leading-relaxed text-[#141111]/90'>
                 {exp.description}
               </p>
             </div>

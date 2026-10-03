@@ -15,10 +15,10 @@ export default function Projects() {
           {/* Mojo Dojo Multiply */}
           <div className='grid grid-cols-1 md:grid-cols-[minmax(0,1.15fr)_minmax(240px,0.85fr)] items-center gap-8 sm:gap-10 md:gap-12'>
             <div className='sketchy-border p-5 sm:p-7 md:p-10 relative bg-[#DDC7A0]/40 backdrop-blur-[1px] order-1 md:order-none'>
-              <h2 className={`${playfair.className} font-semibold pb-2 text-2xl sm:text-3xl text-[#171a21]`}>
+              <h2 className={`${playfair.className} font-semibold pb-2 text-2xl sm:text-3xl md:text-4xl text-[#171a21]`}>
                 Mojo Dojo Multiply
               </h2>
-              <div className='flex flex-wrap gap-4 underline pb-4 font-bold text-sm sm:text-base text-[#141111]'>
+              <div className='flex flex-wrap gap-4 underline pb-4 font-bold text-base sm:text-lg md:text-xl text-[#141111]'>
                 <a 
                   href='https://github.com/thatchereames/mojo-dojo-multiply' 
                   target='_blank' 
@@ -36,7 +36,7 @@ export default function Projects() {
                   Hosted Site
                 </a>
               </div>
-              <ul className='list-disc pl-5 sm:pl-6 font-semibold space-y-1.5 sm:space-y-2 text-sm sm:text-base md:text-lg text-[#141111]/90'>
+              <ul className='list-disc pl-5 sm:pl-6 font-bold space-y-2 text-base sm:text-lg md:text-xl lg:text-2xl text-[#141111]/95'>
                 <li>Developed in a software team of 5</li>
                 <li>Organized using Agile Methodologies</li>
                 <li>TypeScript with Konva visuals</li>
@@ -69,10 +69,10 @@ export default function Projects() {
               />
             </div>
             <div className='sketchy-border p-5 sm:p-7 md:p-10 relative bg-[#DDC7A0]/40 backdrop-blur-[1px] order-1 md:order-none'>
-              <h2 className={`${playfair.className} font-semibold pb-2 text-2xl sm:text-3xl text-[#171a21]`}>
+              <h2 className={`${playfair.className} font-semibold pb-2 text-2xl sm:text-3xl md:text-4xl text-[#171a21]`}>
                 Personal Portfolio Site
               </h2>
-              <div className='flex flex-wrap gap-4 underline pb-4 font-bold text-sm sm:text-base text-[#141111]'>
+              <div className='flex flex-wrap gap-4 underline pb-4 font-bold text-base sm:text-lg md:text-xl text-[#141111]'>
                 <a 
                   href='https://github.com/thatchereames/portfolio-site' 
                   target='_blank' 
@@ -90,7 +90,7 @@ export default function Projects() {
                   Hosted Site
                 </a>
               </div>
-              <ul className='list-disc pl-5 sm:pl-6 font-semibold space-y-1.5 sm:space-y-2 text-sm sm:text-base md:text-lg text-[#141111]/90'>
+              <ul className='list-disc pl-5 sm:pl-6 font-bold space-y-2 text-base sm:text-lg md:text-xl lg:text-2xl text-[#141111]/95'>
                 <li>Next.js Framework website</li>
                 <li>Coded in React</li>
                 <li>Utilizes Motion library</li>
