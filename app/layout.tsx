@@ -25,7 +25,7 @@ export default function RootLayout({
         </header>
 
         {/* Mobile Navigation Button */}
-        <div className='md:hidden fixed top-6 inset-x-0 z-50 flex justify-end px-6 sm:px-8 pointer-events-none'>
+        <div className='md:hidden absolute top-6 inset-x-0 z-50 flex justify-end px-6 sm:px-8 pointer-events-none'>
           <div className='pointer-events-auto'>
             <MobileNav />
           </div>
